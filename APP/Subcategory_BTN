@@ -1,1 +1,337 @@
 // Version 1.0 - 22-01-2014
+
+global subCatHolder
+global xmlContentLink
+
+on mouseUp
+    
+   if xmlContentLink is "hotels-accommodations" then
+      
+      // Load pickwheel shopping
+      put "Hotel,Boutique Hotel,Vakantie Resort,Bed & Breakfast,Hostel & Pension,Lodge,Boerderij,Apartement,Vakantiehuis & Villa,Camping,Diversen" into theList
+      
+      replace comma with cr in theList
+      
+      iphonePick theList,1
+      put the result into theChoice
+      
+      if theChoice is 1 then
+         put "hotels" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 2 then
+         put "boutique-hotels" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 3 then
+         put "resorts" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 4 then
+         put "bed-breakfast" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 5 then
+         put "hostels-pensions" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 6 then
+         put "lodges" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 7 then
+         put "farm-stays" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 8 then
+         put "apartments" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 9 then
+         put "homes-villas" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 10 then
+         put "campings" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 11 then
+         put "other" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      end if
+       
+   else if xmlContentLink is "restaurants-nightlife" then
+       
+      // Load pickwheel nightlife
+      put "Restaurant,Afhaal,Delicatessen,Koffie / Thee / bakkerij,Eten- drinken - dansen,Bar-Restaurant,Bar,Club,Wijn & Cocktail bar,Sport Bar,Sapjes - Salades - Snacks,IJssalon,Diversen" into theList
+      
+      replace comma with cr in theList
+      
+      iphonePick theList,1
+      put the result into theChoice
+      
+      if theChoice is 1 then
+         put "restaurants" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 2 then
+         put "take-away" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 3 then
+         put "delicatessen" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 4 then
+         put "coffee-tea-bakery" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 5 then
+         put "eat-drink-dance" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 6 then
+         put "bar-restaurant" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 7 then
+         put "bars" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 8 then
+         put "clubs" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 9 then
+         put "wine-cocktail-bars" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 10 then
+         put "sports-bars" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 11 then
+         put "juice-salad-snacks" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 12 then
+         put "ice-cream-frozen-yoghurt" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      
+          else if theChoice is 13 then
+         put "other" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      end if
+       
+   else if xmlContentLink is "tours-transport" then
+      
+      // Load pickwheel restaurants
+      put "Reisbureaus,Excursies & uitstapjes,Airports & Airlines,Lokale gids,Huurauto,Taxi,Transfers,Diversen" into theList
+      
+      replace comma with cr in theList
+      
+      iphonePick theList,1
+      put the result into theChoice
+      
+      if theChoice is 1 then
+         put "travel-agencies" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 2 then
+         put "tours-excursions" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 3 then
+         put "airports-airlines" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 4 then
+         put "local-guides" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 5 then
+         put "rental-cars" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 6 then
+         put "taxi" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 7 then
+         put "transfers" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 8 then
+         put "other" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      end if 
+   else if xmlContentLink is "shopping-services" then
+      
+      // Load pickwheel personal services
+      
+      put "Boodschappen,Mode,Interieur & Decoratie,Electronica & Telecom,Cadeaus & Accessoires,Brillen & Zonnebrillen,Drogisterij &  Apotheek,Cosmetica & Parfum,Sport & Speelgoed,Baby's & Kids,Bloemist & Tuincentrum,Klussen,Juwelier,Slijterij,Boeken & Tijschriften,Muziek & Games,Auto,Tweewielers,Wasserette & Kleermaker,Onroerend Goed,Financiën,Drukken & bedrukken,Uitzendbureau,Diversen" into theList
+      
+      replace comma with cr in theList
+      
+      iphonePick theList,1
+      put the result into theChoice
+      
+      if theChoice is 1 then
+         put "daily-groceries" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 2 then
+         put "fashion" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 3 then
+         put "home-deco" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 4 then
+         put "electronics-telecom" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 5 then
+         put "gifts-accessories" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 6 then
+         put "glasses-sunglasses" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 7 then
+         put "pharmacies-chemists" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 8 then
+         put "cosmetics-perfumes" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 9 then
+         put "sports-toys" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 10 then
+         put "babys-kids" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 11 then
+         put "florist-gardencenter" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 12 then
+         put "homeimprovement" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 13 then
+         put "jewellery" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 14 then
+         put "wine-liquor" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 15 then
+         put "books-magazines" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 16 then
+         put "music-games" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+         
+      else if theChoice is 17 then
+         put "cars" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 18 then
+         put "cycles" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 19 then
+         put "laundry-tailoring" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 20 then
+         put "real-estate" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 21 then
+         put "finance" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 22 then
+         put "printing-stitching" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 23 then
+         put "job-agency" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+      else if theChoice is 24 then
+         put "other" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+         
+
+      end if
+      
+   else if xmlContentLink is "beauty-health" then
+      
+      // Load pickwheel professional services
+      put "Kapper & schoonheidspecialist,Spa & Wellness,Medisch & Cosmetisch,Tandheelkundig,Fitness,Zonnebank,Diversen " into theList
+      
+      replace comma with cr in theList
+      
+      iphonePick theList,1
+      put the result into theChoice
+      
+      if theChoice is 1 then
+         put "hair-beauty" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 2 then
+         put "spa-wellness" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 3 then
+         put "medical-cosmetic" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 4 then
+         put "dental" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 5 then
+         put "fitness" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 6 then
+         put "tanning" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 7 then
+         put "other" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      end if      
+      
+   else if xmlContentLink is "events-attractions" then
+      
+      // Load pickwheel professional services
+      put "Musea,Monumenten,Bezienswaardigheden,Galleries,Bioscopen,Theaters,Golf & andere sporten,Dierentuinen,Attractieparken,Casinos & speelhallen,Diversen" into theList
+      
+      replace comma with cr in theList
+      
+      iphonePick theList,1
+      put the result into theChoice
+      
+      if theChoice is 1 then
+         put "museums" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 2 then
+         put "monuments-heritage" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 3 then
+         put "sights" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 4 then
+         put "galleries" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 5 then
+         put "cinemas" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 6 then
+         put "theaters" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 7 then
+         put "golfs-other-sports" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 8 then
+         put "zoo" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 9 then
+         put "fun-family-parks" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 10 then
+         put "casinos-games" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      else if theChoice is 11 then
+         put "other" into subCatHolder
+         send "loadSubcat" to me in 0 milliseconds
+      end if      
+      
+   end if
+     
+end mouseUp
