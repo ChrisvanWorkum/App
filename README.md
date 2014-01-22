@@ -1,1 +1,1 @@
-GO
+Stapping Stone app with all functions
