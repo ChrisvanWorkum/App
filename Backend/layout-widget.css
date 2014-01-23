@@ -2,13 +2,22 @@
 
 body {
 	font-family: Sans-Serif;
+	left: 0px;
+	top: 0px;
+}
+
+html {
+	left: 0px;
+	top: 0px;
 }
 
 .container {
+	position: absolute;
 	width: 460px;
 	height: 400px;
 
-	margin-left:0px;
+	left:0px;
+	top: 0px;
 	border:1px;
 	border-style:solid;
 	border-color: #bdbdbd;
