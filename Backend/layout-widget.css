@@ -17,6 +17,11 @@ body {
 	border-radius: 3px;
 }
 
+a {
+	color: #4a4a4a;
+	text-decoration: none;
+}
+
 img {
 	max-width: 100%;
 }
@@ -112,9 +117,15 @@ img {
   	font-weight: 400;
 }
 
+hr {
+	border: none;
+	border-bottom: 1px solid #e5e5e5;
+	margin: 5px 0 15px
+}
+
 .image-embed {
 	max-width: 350px;
-	margin-top: 15px;
+	margin-top: 10px;
 	float: right;
 }
 
@@ -134,14 +145,8 @@ img {
   	font-size: 11pt;
 }
 
-a {
-	color: #919191;
-	text-decoration: none;
-}
-
 .download {
 	float:right;
 	margin-top: 11px;
 	margin-right: 10px;
-	color: #919191;
 }
